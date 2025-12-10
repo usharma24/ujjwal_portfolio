@@ -1,0 +1,154 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Ujjwal Sharma — Python Developer & iMSc(IT) Student{% endblock %}
+
+{% block content %}
+
+<section class="hero">
+    <div class="container">
+        <div class="hero-inner">
+            <div>
+                <div class="hero-badge">
+                    <span class="chip-dot"></span>
+                    <span>Python Developer & iMSc(IT) Student — Ahmedabad, India</span>
+                </div>
+
+                <h1 class="hero-title">
+                    Building <span>Scalable</span> & <span>Impactful</span> Digital Solutions  
+                </h1>
+
+                <p class="hero-subtitle">
+                    I am <strong>Ujjwal Sharma</strong> — a passionate Python & Django developer pursuing
+                    an Integrated Master of Science in Information Technology (iMSc IT) at
+                    <strong>GLS University</strong>.
+                    <br><br>
+                    Specializing in <strong>Web Applications</strong>, <strong>Database Systems</strong>,
+                    & <strong>AI-powered Computer Vision</strong> projects.  
+                    I aim to deliver fast, accessible and strong solutions that make technology
+                    more inclusive for everyone.
+                </p>
+
+                <ul class="hero-meta">
+                    <li class="chip chip-strong">
+                        2+ Major Projects • CashAssist (Computer Vision) & TicketIQ (ITSM System)
+                    </li>
+                    <li class="chip">
+                        Looking for Python/Django Internships & Industry Collaboration
+                    </li>
+                    <li class="chip">
+                        Ahmedabad, Gujarat — Available On-site & Remote
+                    </li>
+                </ul>
+
+                <div class="hero-actions">
+                    <a href="{% url 'projects' %}" class="btn btn-primary">
+                        Explore My Projects <span class="btn-icon">⚡</span>
+                    </a>
+                    <a href="{% url 'contact' %}" class="btn btn-ghost">
+                        Hire / Contact Me <span class="btn-icon">✉</span>
+                    </a>
+                </div>
+            </div>
+
+            <aside class="hero-aside">
+                <div class="hero-photo-frame">
+                    <img src="{% static 'portfolio/images/Profile.jpeg' %}" 
+                        alt="Ujjwal Sharma Profile Photo" 
+                        class="hero-photo">
+                </div>
+                <div class="hero-aside-footer">
+                    <div class="metric-card">
+                        <div class="metric-label">CGPA</div>
+                        <div class="metric-value">8.28+</div>
+                        <div class="metric-tag">Top Performance</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-label">Core Skills</div>
+                        <div class="metric-value">Python + Django</div>
+                        <div class="metric-tag">Primary Tech Stack</div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+</section>
+
+<section id="about-preview">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Who Am I?</h2>
+            <div class="section-pill">Driven by curiosity</div>
+        </div>
+
+        <article class="card about-text">
+            <p>
+                I am deeply interested in developing technology that solves 
+                <strong>real-world problems</strong> — whether it's helping visually impaired individuals
+                or improving IT support performance inside organizations.
+            </p>
+            <p>
+                My goal is to join a strong engineering team where I can contribute to
+                <strong>backend development, automation, and AI engineering</strong> while growing as a
+                skilled software professional.
+            </p>
+            <p>
+                I regularly learn new technologies, contribute to personal projects,
+                and enhance my understanding of scalable system architecture.
+            </p>
+            <div style="margin-top:1rem;">
+                <a href="{% url 'about' %}" class="btn btn-primary">Read More →</a>
+            </div>
+        </article>
+    </div>
+</section>
+
+<section id="featured-projects">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="section-pill">Real-world results</div>
+        </div>
+
+        <div class="projects-grid">
+            <article class="project-card tilt-3d">
+                <div class="project-title-row">
+                    <h3 class="project-title">CashAssist</h3>
+                    <div class="project-stack">Python • TensorFlow • Mobile Vision</div>
+                </div>
+                <p class="project-desc">
+                    Computer vision application to help visually impaired users identify
+                    Indian currency in real time.
+                </p>
+                <a href="{% url 'projects' %}" class="btn btn-ghost">View details →</a>
+            </article>
+
+            <article class="project-card tilt-3d">
+                <div class="project-title-row">
+                    <h3 class="project-title">TicketIQ</h3>
+                    <div class="project-stack">Django • SQL • Role-based Access</div>
+                </div>
+                <p class="project-desc">
+                    Change Management & Incident Tracking System designed to improve
+                    organizational response and accountability.
+                </p>
+                <a href="{% url 'projects' %}" class="btn btn-ghost">View details →</a>
+            </article>
+        </div>
+    </div>
+</section>
+
+<section id="cta">
+    <div class="container">
+        <div class="card" style="text-align:center; padding:2rem;">
+            <h3 style="margin-bottom:0.8rem;">Open to Internships & Freelance Work 🚀</h3>
+            <p class="muted" style="margin-bottom:1.2rem;">
+                Let’s collaborate and build something meaningful using Python & AI.
+            </p>
+            <a href="{% url 'contact' %}" class="btn btn-primary">
+                Let’s Work Together <span class="btn-icon">🤝</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

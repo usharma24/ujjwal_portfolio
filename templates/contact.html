@@ -1,0 +1,127 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Contact — Ujjwal Sharma{% endblock %}
+
+{% block content %}
+
+<section id="contact">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Get In Touch</h2>
+      <div class="section-pill">Let's build something amazing</div>
+    </div>
+
+    <div class="contact-grid">
+
+      <!-- Contact Details -->
+      <div>
+        <article class="card">
+          <h3 class="card-heading">Reach Me Directly</h3>
+          <p class="card-subtitle">
+            I’m open to collaborations, internships, freelance work or exciting tech challenges.
+          </p>
+
+          <div class="contact-list">
+
+            <div class="contact-item">
+              <div>
+                <div class="contact-label">Email</div>
+                <div class="contact-value">
+                  <a href="mailto:ujjwalsharma12876@gmail.com">
+                    <i class="devicon-google-plain colored"></i> 
+                    ujjwalsharma12876@gmail.com
+                  </a>
+                </div>
+              </div>
+              <div class="muted">Preferred</div>
+            </div>
+
+            <div class="contact-item">
+              <div>
+                <div class="contact-label">Phone</div>
+                <div class="contact-value">
+                  <a href="tel:+919375059900">
+                    📞 +91 93750 59900
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div>
+                <div class="contact-label">Location</div>
+                <div class="contact-value">Ahmedabad, Gujarat, India</div>
+              </div>
+              🏙
+            </div>
+
+            <div class="contact-item">
+              <div>
+                <div class="contact-label">LinkedIn</div>
+                <div class="contact-value">
+                  <a href="https://www.linkedin.com/in/ujjwal-sharma-0840432b4/" target="_blank">
+                    <i class="devicon-linkedin-plain colored"></i> 
+                    Ujjwal Sharma
+                  </a>
+                </div>
+              </div>
+              🔗
+            </div>
+
+            <div class="contact-item">
+              <div>
+                <div class="contact-label">Instagram</div>
+                <div class="contact-value">
+                  <a href="https://www.instagram.com/ujjwal_sharma_24?igsh=b2h0emZ0NGpsbnli" target="_blank">
+                    Ujjwal Sharma
+                  </a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </article>
+      </div>
+
+      <!-- Contact Form -->
+      <div>
+        <article class="card">
+          <h3 class="card-heading">Quick Message</h3>
+          <p class="card-subtitle">
+            Send me a message — I’ll get back to you quickly!
+          </p>
+
+          <form class="contact-form" method="POST" action="">
+            {% csrf_token %}
+            
+            <div class="field">
+                <label for="name">Name</label>
+                <input name="name" id="name" type="text" placeholder="Your name" autocomplete="name" required />
+            </div>
+
+            <div class="field">
+                <label for="email">Email</label>
+                <input name="email" id="email" type="email" placeholder="you@example.com"
+                      autocomplete="email" required />
+            </div>
+
+            <div class="field">
+                <label for="message">Message</label>
+                <textarea name="message" id="message" rows="4"
+                          placeholder="How can we collaborate?"
+                          autocomplete="off" required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary">
+                Send Message ✨
+            </button>
+          </form>
+
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

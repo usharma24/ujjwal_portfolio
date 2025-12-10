@@ -1,0 +1,103 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>{% block title %}Ujjwal Sharma | Portfolio{% endblock %}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Portfolio of Ujjwal Sharma — Python, Django & Data-driven software developer.">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="{% static 'portfolio/css/style.css' %}">
+</head>
+
+<body>
+<canvas id="hero-canvas"></canvas>
+<div class="parallax-orb orb-1" data-speed="0.03"></div>
+<div class="parallax-orb orb-2" data-speed="0.06"></div>
+<div class="parallax-orb orb-3" data-speed="0.05"></div>
+
+<div class="page-wrap">
+<header class="header">
+  <div class="container">
+    <div class="header-inner">
+      <a href="/" class="brand">
+        <div class="brand-logo">U</div>
+        <div>
+          <div class="brand-text-main">Ujjwal Sharma</div>
+          <div class="brand-text-sub">iMSc(IT) • Developer</div>
+        </div>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="/">Home</a>
+        <a href="/about/">About</a>
+        <a href="/skills/">Skills</a>
+        <a href="/projects/">Projects</a>
+        <a href="/contact/">Contact</a>
+      </nav>
+
+      <a class="nav-cta" href="/contact/">
+        <span>Let's Talk</span>
+        <span class="btn-icon">↗</span>
+      </a>
+
+      <button class="nav-toggle" id="navToggle">
+        <span></span>
+      </button>
+    </div>
+
+    <div class="nav-mobile-row" id="navMobileRow" style="display:none;">
+      <nav class="nav-links mobile-open">
+        <a href="/">Home</a>
+        <a href="/about/">About</a>
+        <a href="/skills/">Skills</a>
+        <a href="/projects/">Projects</a>
+        <a href="/contact/">Contact</a>
+      </nav>
+      <a class="nav-cta mobile-open" href="/contact/">
+        <span>Let's Talk</span>
+        <span class="btn-icon">↗</span>
+      </a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+  {% block content %}{% endblock %}
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      © <span id="year"></span> Ujjwal Sharma — All Rights Reserved.
+      <div class="footer-links">
+        <a href="#top">Back to top</a>
+      </div>
+    </div>
+  </div>
+</footer>
+</div>
+
+<!-- JS -->
+<script src="https://unpkg.com/three@0.158.0/build/three.min.js"></script>
+<script src="{% static 'portfolio/js/effects.js' %}"></script>
+
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
+const navToggle = document.getElementById("navToggle");
+const navMobileRow = document.getElementById("navMobileRow");
+navToggle.addEventListener("click", () => {
+  const opened = navMobileRow.style.display === "block";
+  navMobileRow.style.display = opened ? "none" : "block";
+  navToggle.classList.toggle("active", !opened);
+});
+</script>
+
+</body>
+</html>

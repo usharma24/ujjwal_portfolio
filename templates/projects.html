@@ -1,0 +1,127 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Projects — Ujjwal Sharma | Portfolio{% endblock %}
+
+{% block content %}
+
+<section id="projects" class="animate-up">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Projects</h2>
+      <div class="section-pill">Real-world solutions</div>
+    </div>
+
+    <div class="projects-grid">
+
+      <!-- Project A — CashAssist -->
+      <article class="project-card">
+        <div class="project-title-row">
+          <h3 class="project-title">
+            CashAssist – Banknote Identification App
+          </h3>
+          <div class="project-stack">
+            Android • Python • TensorFlow • Firebase
+          </div>
+        </div>
+        <p class="project-desc">
+          A mobile solution that helps visually-impaired individuals accurately identify
+          Indian currency using deep learning & real-time voice guidance.
+        </p>
+        <ul class="project-keypoints">
+          <li>Lightweight TFLite model for edge performance</li>
+          <li>Instant Indian banknote recognition</li>
+          <li>Accessibility-focused UI / UX</li>
+          <li>Cloud analytics via Firebase</li>
+        </ul>
+
+        <div class="project-links">
+          <a href="{% static 'portfolio/projects/CashAssist.pptx' %}" 
+             class="btn btn-primary"
+             download>
+            Download Presentation ↗
+          </a>
+        </div>
+      </article>
+
+
+      <!-- Project B — TicketIQ -->
+      <article class="project-card">
+        <div class="project-title-row">
+          <h3 class="project-title">
+            TicketIQ — Change & Incident Tracking System
+            <!-- <span class="pill-soft"><span class="pill-soft-dot"></span> In Progress</span> -->
+          </h3>
+          <div class="project-stack">
+            Django • MySQL • HTML • CSS • JS
+          </div>
+        </div>
+        <p class="project-desc">
+          Role-based management platform for IT support teams to track incidents,
+          approvals & escalations with live operational insights.
+        </p>
+        <ul class="project-keypoints">
+          <li>Secure authentication & RBAC</li>
+          <li>Real-time dashboards</li>
+          <li>Email workflow automation</li>
+          <li>Smart assignment & escalation system</li>
+        </ul>
+
+        <div class="project-links">
+          <a href="{% static 'portfolio/projects/TicketIQ.pptx' %}" 
+             class="btn btn-primary"
+             download>
+            Download Presentation ↗
+          </a>
+        </div>
+      </article>
+
+
+      <!-- Project C — Smart Safety Helmet -->
+      <article class="project-card">
+        <div class="project-title-row">
+          <h3 class="project-title">Smart Safety Helmet</h3>
+          <div class="project-stack">
+            IoT • GSM • GPS • Health Monitoring
+          </div>
+        </div>
+        <p class="project-desc">
+          A safety-enhanced helmet designed to prevent accidents & report emergencies
+          using fall detection, live GPS, heart-rate monitoring & automated SMS alerts.
+        </p>
+        <ul class="project-keypoints">
+          <li>Alerts emergency contacts with GPS location</li>
+          <li>Real-time fall detection using sensors</li>
+          <li>Heartbeat & health tracking</li>
+          <li>Designed for construction & road safety</li>
+        </ul>
+
+        <div class="project-links">
+          <a href="{% static 'portfolio/projects/Smart_Helmet.pptx' %}" 
+             class="btn btn-primary"
+             download>
+            Download Presentation ↗
+          </a>
+        </div>
+      </article>
+
+
+      <!-- Coming Soon -->
+      <article class="project-card">
+        <div class="project-title-row">
+          <h3 class="project-title">Next Projects Loading…</h3>
+          <div class="project-stack">Research & Development</div>
+        </div>
+        <p class="project-desc">
+          Currently exploring AI in accessibility, data intelligence & edge computing.
+        </p>
+        <div class="project-links">
+          <a class="btn btn-ghost disabled">Stay Tuned 👀</a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+{% endblock %}

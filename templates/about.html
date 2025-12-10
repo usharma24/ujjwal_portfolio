@@ -1,0 +1,159 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}About Me | Ujjwal Sharma — Aspiring Python Developer{% endblock %}
+
+{% block content %}
+
+<section id="about" class="about-section">
+    <div class="container">
+        <div class="section-header">
+            <h1 class="section-title">About Me</h1>
+            <div class="section-pill">My journey in tech</div>
+        </div>
+
+        <div class="section-grid">
+            
+            <!-- About Summary -->
+            <article class="card about-text tilt-3d">
+                <h2 class="card-heading">Who I Am</h2>
+                <p>
+                    I'm <strong>Ujjwal Sharma</strong>, a curious and passionate
+                    <strong>Python & Django Developer</strong> currently studying 
+                    <strong>Integrated MSc. in Information Technology</strong> 
+                    at FCAIT GLS University, Ahmedabad.
+                </p>
+                <p>
+                    My focus lies in <strong>backend development</strong>, 
+                    <strong>REST APIs</strong>, and innovative 
+                    <strong>AI-driven solutions</strong> 
+                    like computer vision applications.
+                    I love transforming ideas into production-ready software 
+                    that creates real-world impact.
+                </p>
+                <p>
+                    I'm constantly exploring new tools, improving logic building, 
+                    and embracing challenges that push me to grow as a developer.
+                </p>
+            </article>
+
+            <!-- Highlights -->
+            <article class="card tilt-3d">
+                <h2 class="card-heading">What Drives Me</h2>
+                <ul class="about-highlights">
+                    <li>🔥 Passion for building real solutions with technology</li>
+                    <li>🧠 Strong analytical and problem-solving mindset</li>
+                    <li>🤝 Collaborating in teams with leadership experience</li>
+                    <li>🚀 Always learning, improving, and taking initiative</li>
+                </ul>
+
+                <div class="about-stats">
+                    <div>
+                        <strong>10+</strong>
+                        <span>Projects completed</span>
+                    </div>
+                    <div>
+                        <strong>8.28 CGPA</strong>
+                        <span>Current BSc IT track</span>
+                    </div>
+                    <div>
+                        <strong>3+ years</strong>
+                        <span>Hands-on coding</span>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- Education Section -->
+<section id="education">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Education</h2>
+            <div class="section-pill">Academic foundation</div>
+        </div>
+
+        <article class="card tilt-3d">
+            <div class="timeline">
+
+                <div class="timeline-item">
+                    <div class="timeline-marker-wrap">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-line"></div>
+                    </div>
+                    <div class="timeline-body">
+                        <div class="timeline-title">
+                            Integrated MSc in Information Technology (iMSc-IT)
+                        </div>
+                        <div class="timeline-meta">
+                            FCAIT GLS University — 2022 to 2027
+                        </div>
+                        <p class="muted">
+                            Majoring in Software Engineering, Backend Development,
+                            Machine Learning & Data Technologies.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker-wrap">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-line"></div>
+                    </div>
+                    <div class="timeline-body">
+                        <div class="timeline-title">
+                            Higher Secondary School (12th)
+                        </div>
+                        <div class="timeline-meta">
+                            PM Shree K.V. Sabarmati, Ahmedabad
+                        </div>
+                        <p class="muted">Percentage: 71.8%</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker-wrap">
+                        <div class="timeline-dot"></div>
+                    </div>
+                    <div class="timeline-body">
+                        <div class="timeline-title">
+                            Secondary School (10th)
+                        </div>
+                        <div class="timeline-meta">
+                            PM Shree K.V. Sabarmati, Ahmedabad
+                        </div>
+                        <p class="muted">Percentage: 56.8%</p>
+                    </div>
+                </div>
+
+            </div>
+        </article>
+
+    </div>
+</section>
+
+
+<!-- CTA Section -->
+<section class="cta-section">
+    <div class="container">
+        <article class="card tilt-3d cta-card">
+            <h2>Let’s Collaborate 👋</h2>
+            <p class="muted">
+                I am actively seeking internships or part-time opportunities in
+                <strong>Python Development</strong>, 
+                <strong>Backend Engineering</strong>, or 
+                <strong>AI-driven applications</strong>.
+            </p>
+            <a href="{% url 'projects' %}" class="btn btn-primary">
+                View My Work <span class="btn-icon">↗</span>
+            </a>
+            <a href="{% url 'contact' %}" class="btn btn-ghost">
+                Contact Me <span class="btn-icon">✉</span>
+            </a>
+        </article>
+    </div>
+</section>
+
+{% endblock %}

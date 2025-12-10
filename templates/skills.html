@@ -1,0 +1,126 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Technical & Professional Skills — Ujjwal Sharma{% endblock %}
+
+{% block content %}
+
+<section id="skills" class="animate-up">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Skills & Expertise</h2>
+      <div class="section-pill">Tools that power my solutions</div>
+    </div>
+
+    <!-- Technical Skills -->
+    <article class="card">
+      <div class="skills-grid">
+
+        <div>
+          <div class="skills-group-title">Programming & Software</div>
+          <div class="skill-chips">
+
+            <span class="skill-chip highlight">
+              <i class="devicon-python-plain colored"></i>Python
+              <small class="skill-level">Advanced</small>
+            </span>
+
+            <span class="skill-chip highlight">
+              <i class="devicon-django-plain colored"></i>Django Framework
+              <small class="skill-level">Advanced</small>
+            </span>
+
+            <span class="skill-chip">
+              <i class="devicon-javascript-plain colored"></i>JavaScript (ES6)
+              <small class="skill-level">Intermediate</small>
+            </span>
+
+            <span class="skill-chip">
+              <i class="devicon-html5-plain colored"></i>HTML5
+            </span>
+
+            <span class="skill-chip">
+              <i class="devicon-css3-plain colored"></i>CSS3
+            </span>
+
+            <span class="skill-chip">
+              <i class="devicon-bootstrap-plain colored"></i>Bootstrap 5
+            </span>
+
+          </div>
+        </div>
+
+        <div>
+          <div class="skills-group-title">Databases</div>
+          <div class="skill-chips">
+            <span class="skill-chip">
+              <i class="devicon-mysql-plain colored"></i>MySQL
+            </span>
+            <span class="skill-chip">
+              <i class="devicon-sqlite-plain colored"></i>SQLite
+            </span>
+          </div>
+        </div>
+
+        <div>
+          <div class="skills-group-title">AI & Computer Vision</div>
+          <div class="skill-chips">
+            <span class="skill-chip">
+              <i class="devicon-tensorflow-original colored"></i>TensorFlow
+            </span>
+            <span class="skill-chip">
+              <i class="devicon-opencv-plain colored"></i>OpenCV
+            </span>
+            <span class="skill-chip">Image Processing</span>
+          </div>
+        </div>
+
+        <div>
+          <div class="skills-group-title">Cloud & Tools</div>
+          <div class="skill-chips">
+            <span class="skill-chip">
+              <i class="devicon-firebase-plain colored"></i>Firebase
+            </span>
+            <span class="skill-chip">
+              <i class="devicon-git-plain colored"></i>Git Version Control
+            </span>
+            <span class="skill-chip">
+              <i class="devicon-github-original colored"></i>GitHub
+            </span>
+            <span class="skill-chip">VS Code</span>
+            
+          </div>
+        </div>
+
+        <div>
+          <div class="skills-group-title">Core CS Knowledge</div>
+          <div class="skill-chips">
+            <span class="skill-chip">OOP Concepts</span>
+            <span class="skill-chip">Software Engineering</span>
+            <span class="skill-chip">Database Design</span>
+            <span class="skill-chip">Data Structures</span>
+          </div>
+        </div>
+
+      </div>
+    </article>
+
+    <!-- Professional Skills -->
+    <article class="card" style="margin-top:2rem;">
+      <div class="skills-group-title">Professional Skills</div>
+      <p style="color:var(--text-muted); font-size:0.85rem; margin-bottom:1rem;">
+        Strong communication & leadership abilities complement my technical problem-solving approach.
+      </p>
+      <div class="skill-chips">
+        <span class="skill-chip">Teamwork</span>
+        <span class="skill-chip">Project Ownership</span>
+        <span class="skill-chip">Presentation Skills</span>
+        <span class="skill-chip">Analytical Thinking</span>
+        <span class="skill-chip">Client-focused Delivery</span>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+{% endblock %}
