@@ -38,13 +38,12 @@ CSRF_TRUSTED_ORIGINS = [
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["localhost", "127.0.0.1", ".vercel.app", ".now.sh"]
 
 
 # Application definition
 
 INSTALLED_APPS = [
-    'whitenoise.runserve_nostatic',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -56,7 +55,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
+    "whitenoise.middleware.WhiteNoiseMiddleware",
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -158,9 +157,13 @@ EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
 EMAIL_HOST = "smtp.gmail.com"
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = "ujjwalsharma12876@gmail.com"   # Replace with your email
-EMAIL_HOST_PASSWORD = "ctgu ocpg wwrz oaiy"  # Use App Password for Gmail
-CONTACT_EMAIL = "ironman052004@gmail.com"
-DEFAULT_FROM_EMAIL = " <ujjwalsharma12876@gmail.com>"
+EMAIL_HOST_USER = os.getenv("EMAIL_HOST_USER")
+EMAIL_HOST_PASSWORD = os.getenv("EMAIL_HOST_PASSWORD")
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+CONTACT_EMAIL = os.getenv("CONTACT_EMAIL", EMAIL_HOST_USER)
+# EMAIL_HOST_USER = "ujjwalsharma12876@gmail.com"   # Replace with your email
+# EMAIL_HOST_PASSWORD = "ctgu ocpg wwrz oaiy"  # Use App Password for Gmail
+# CONTACT_EMAIL = "ironman052004@gmail.com"
+# DEFAULT_FROM_EMAIL = " <ujjwalsharma12876@gmail.com>"
 
  
